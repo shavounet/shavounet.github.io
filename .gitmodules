@@ -1,0 +1,3 @@
+[submodule "lib/musicbox"]
+	path = lib/musicbox
+	url = https://github.com/shavounet/musicbox.git
