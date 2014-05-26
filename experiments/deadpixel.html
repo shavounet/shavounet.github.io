@@ -1,0 +1,89 @@
+<!--[if lt IE 7 ]> <html class="lt-ie7 en" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>    <html class="lt-ie8 en" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9 en" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>    <html class="lt-ie10 en" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en-US"><!--<![endif]-->
+	<head>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<title>Evil Pixel 2</title>
+		<style>
+            body { margin: 2em; padding: 1em; color: #333; }
+
+            #evilpixel { position:fixed;width:3px;height:3px;background:red; }
+		</style>
+
+        <script>
+            window.addEventListener("load", function(){
+                window.oldX = window.screenX,
+                window.oldY = window.screenY;
+
+                var evilpixel = document.getElementById("evilpixel");
+                evilpixel.style.top = Math.random() * window.innerHeight;
+                evilpixel.style.left = Math.random() * window.innerWidth;
+
+                console.log("pixel is now at ("+evilpixel.style.left+";"+evilpixel.style.top+")");
+
+                function renderLoop(){
+
+                    if(window.oldX != window.screenX || window.oldY != window.screenY) {
+                        var dx = window.screenX - window.oldX,
+                            dy = window.screenY - window.oldY;
+                        evilpixel.style.left = Number.parseFloat(evilpixel.style.left) - dx;
+                        evilpixel.style.top = Number.parseFloat(evilpixel.style.top) - dy;
+                        console.log("moving ("+dx+";"+dy+") => pixel is now at ("+evilpixel.style.left+";"+evilpixel.style.top+")");
+                    }
+
+                    window.oldX = window.screenX;
+                    window.oldY = window.screenY;
+
+                    window.requestAnimationFrame(renderLoop);
+                }
+
+                window.requestAnimationFrame(renderLoop);
+            });
+        </script>
+	</head>
+	<body>
+
+        <div id='evilpixel'></div>
+
+		<h1>Ipsam Vuptatem</h1>
+        <p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Itaque earum rerum hic tenetur a sapiente delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Qui officia deserunt mollit anim id est laborum. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. Itaque earum rerum hic tenetur a sapiente delectus. Fugiat quo voluptas nulla pariatur? Itaque earum rerum hic tenetur a sapiente delectus.</p>
+        <ul>
+        <li>Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</li>
+        <li>Nihil molestiae consequatur, vel illum qui dolorem eum.</li>
+        </ul>
+        <h3>Nam Libero Tempore</h3>
+        <p>Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Laboris nisi ut aliquip ex ea commodo consequat. Facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+        <h4>Quis Nostrum</h4>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. At vero eos et accusamus.</p>
+        <ol>
+        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</li>
+        <li>Itaque earum rerum hic tenetur a sapiente delectus.</li>
+        </ol>
+        <h5>Lorem Ipsum Dolor Sit Amet</h5>
+        <p>Et harum quidem rerum facilis est et expedita distinctio. Corrupti quos dolores et quas molestias excepturi sint occaecati. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <h6>Ipsam Vuptatem</h6>
+        <p>Itaque earum rerum hic tenetur a sapiente delectus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Totam rem aperiam.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit. Qui officia deserunt mollit anim id est laborum. Qui officia deserunt mollit anim id est laborum. Fugiat quo voluptas nulla pariatur? Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem. At vero eos et accusamus. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Architecto beatae vitae dicta sunt explicabo. Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Itaque earum rerum hic tenetur a sapiente delectus.</p>
+        <p>Itaque earum rerum hic tenetur a sapiente delectus. Animi, id est laborum et dolorum fuga. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+        <p>Corrupti quos dolores et quas molestias excepturi sint occaecati. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p>Architecto beatae vitae dicta sunt explicabo. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboris nisi ut aliquip ex ea commodo consequat. Itaque earum rerum hic tenetur a sapiente delectus. Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit. Et harum quidem rerum facilis est et expedita distinctio. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat. Fugiat quo voluptas nulla pariatur? Nihil molestiae consequatur, vel illum qui dolorem eum. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+        <p>Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Et harum quidem rerum facilis est et expedita distinctio. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        <p>Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Animi, id est laborum et dolorum fuga. At vero eos et accusamus. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+        <p>Corrupti quos dolores et quas molestias excepturi sint occaecati. Nihil molestiae consequatur, vel illum qui dolorem eum. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <p>Fugiat quo voluptas nulla pariatur? Nihil molestiae consequatur, vel illum qui dolorem eum. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. Animi, id est laborum et dolorum fuga.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Corrupti quos dolores et quas molestias excepturi sint occaecati. Totam rem aperiam.</p>
+        <p>Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia. Duis aute irure dolor in reprehenderit in voluptate velit. Totam rem aperiam.</p>
+        <p>Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. At vero eos et accusamus. Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+
+
+	</body>
+</html>
