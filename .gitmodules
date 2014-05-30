@@ -1,3 +1,6 @@
 [submodule "lib/musicbox"]
 	path = lib/musicbox
 	url = https://github.com/shavounet/musicbox.git
+[submodule "lib/bacteria"]
+	path = lib/bacteria
+	url = https://github.com/shavounet/bacteria.git
